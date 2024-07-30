@@ -29,7 +29,7 @@ read_csv("raw-data/npi-data.csv") %>%
            age_group == 5 ~ '50-59'),
          age_group = factor(age_group, ordered = TRUE)
          ) %>% 
-  select(score, gender, age = age_group) ->
+  select(narcissism = score, gender, age = age_group) ->
   npi_df
 
 # Process the Big 5 data --------------------------------------------------
