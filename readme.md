@@ -13,16 +13,16 @@ For example, here is how to test for gender differences in narcissism scores.
 
 ```r
 # read in data using read.csv b/c no package dependencies
-narcissim_df <- read.csv("data/npi.csv")
+narcissism_df <- read.csv("data/npi.csv")
 # alternatively, read directly from GitHub
 # the tinyurl URL points to npi.csv on GitHub:
-read.csv('https://tinyurl.com/7b094')
+narcissism_df <- read.csv('https://tinyurl.com/7b094')
 ```
 
 ### Independent samples t-test
 
 ```r
-t.test(narcissism ~ gender, data = narcissim_df)
+t.test(narcissism ~ gender, data = narcissism_df)
 
 ## 
 ##  Welch Two Sample t-test
@@ -41,7 +41,7 @@ t.test(narcissism ~ gender, data = narcissim_df)
 
 ```r
 # yes, it is Mann-Whitney, despite name
-wilcox.test(narcissism ~ gender, data = narcissim_df)
+wilcox.test(narcissism ~ gender, data = narcissism_df)
 
 ## 
 ##  Wilcoxon rank sum test with continuity correction
