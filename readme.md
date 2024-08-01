@@ -14,6 +14,9 @@ For example, here is how to test for gender differences in narcissism scores.
 ```r
 # read in data using read.csv b/c no package dependencies
 narcissim_df <- read.csv("data/npi.csv")
+# alternatively, read directly from GitHub
+# the tinyurl URL points to npi.csv on GitHub:
+read.csv('https://tinyurl.com/7b094')
 ```
 
 ### Independent samples t-test
